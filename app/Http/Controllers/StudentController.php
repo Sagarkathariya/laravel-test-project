@@ -12,7 +12,7 @@ public function index()
     // Fetch all students from the database
     $students = Student::all(); 
     // Return the list view (assuming it's in resources/views/home/index.blade.php)
-    return view('index', ['students' => $students]);
+    return view('index', compact('students'));
 }
 
     //// Show the form

@@ -5,7 +5,7 @@ use App\Http\Controllers\StudentController;
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 Route::get('/students', [StudentController::class, 'index'])->name('students.index');
 Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
