@@ -79,7 +79,8 @@
 
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary btn-lg">Register Student</button>
-                                <button href="{{}}"></button>
+                                <br>
+                                <a class="btn btn-primary btn-lg" href="{{route ('students.index')}}">Back</a>
                             </div>
                         </form>
                     </div>
