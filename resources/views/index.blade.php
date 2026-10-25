@@ -18,7 +18,9 @@
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Registered Students</h2>
+            <a href="{{ route('welcome') }}" class="btn btn-success">Home</a>
             <a href="{{ route('students.create') }}" class="btn btn-success">+ Add New Student</a>
+
         </div>
 
         <div class="card shadow-sm">
@@ -28,10 +30,13 @@
                         <tr>
                             <th>S.No.</th>
                             <th>Full Name</th>
+                            <th>Phone Number</th>
                             <th>Email</th>
                             <th>Date of Birth</th>
+                            <th>Address</th>
                             <th>Course</th>
                             <th>Registered At</th>
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -40,12 +45,15 @@
                             <tr>
                                 <td>{{ $student->id }}</td>
                                 <td>{{ $student->full_name }}</td>
+                                <td>{{ $student->phone_number }}</td>
                                 <td>{{ $student->email }}</td>
                                 <td>{{ $student->date_of_birth }}</td>
+                                <td>{{ $student->address }}</td>
                                 <td>
                                     <span class="badge bg-info text-dark">{{ $student->course }}</span>
                                 </td>
                                 <td>{{ $student->created_at->format('M d, Y') }}</td>
+                                <td>{{ $student->Status ? 'Active' : 'Inactive' }}</td>
                                 <td>
                                     <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
                                     <button class="btn btn-sm btn-outline-danger">Delete</button>
